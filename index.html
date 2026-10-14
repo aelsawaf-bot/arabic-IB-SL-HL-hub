@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>العربية ب – مركز التعلم</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f5f7;--card:#fff;--ink:#10243a;--mute:#566a7f;--line:#d9e1e8;--a:#0f766e;--abg:#dff3f0;--hl:#b7791f;--hlbg:#fbefd5;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1722;--card:#132333;--ink:#e8f0f7;--mute:#9bb0c2;--line:#223548;--a:#4fd1c5;--abg:#10322f;--hl:#f6c768;--hlbg:#3a2d10}}
+:root[data-theme="dark"]{--bg:#0c1722;--card:#132333;--ink:#e8f0f7;--mute:#9bb0c2;--line:#223548;--a:#4fd1c5;--abg:#10322f;--hl:#f6c768;--hlbg:#3a2d10}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.8 "IBM Plex Sans Arabic",system-ui,sans-serif}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--card);border-bottom:1px solid var(--line);padding:10px 18px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.brand{font-weight:700;font-size:19px;margin-inline-end:auto}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+button{font:inherit;color:inherit;cursor:pointer}
+nav button,.chip{border:1px solid transparent;background:none;padding:5px 14px;border-radius:99px}
+nav button[aria-current=true],.chip[aria-pressed=true]{background:var(--a);color:var(--card);font-weight:600}
+.chip{border-color:var(--line);background:var(--card)}
+.lv{display:flex;border:1px solid var(--line);border-radius:99px;overflow:hidden}
+.lv button{border:0;background:none;padding:4px 16px;font-weight:600}
+.lv button[aria-pressed=true]{background:var(--ink);color:var(--card)}
+:focus-visible{outline:3px solid var(--a);outline-offset:2px}
+main{max-width:980px;margin:0 auto;padding:28px 18px 60px}
+h1{font-size:clamp(28px,5vw,42px);line-height:1.3;margin:0 0 8px}
+h2{font-size:22px;margin:30px 0 12px}
+p{margin:0 0 10px}.mute{color:var(--mute)}
+.themes{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:20px 0}
+.th{text-align:start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 16px;min-height:130px}
+.th b{display:block;font-size:24px;line-height:1.3}
+.th small{color:var(--mute);direction:ltr;display:block;text-align:start}
+.th[aria-pressed=true]{background:var(--a);color:var(--card);border-color:var(--a)}
+.th[aria-pressed=true] small{color:inherit}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:14px}
+.panel ul{margin:6px 0 0;padding-inline-start:22px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.tag{background:var(--abg);color:var(--a);border-radius:99px;padding:2px 14px;font-size:15px}
+table{width:100%;border-collapse:collapse;margin:10px 0}
+td{padding:8px 10px;border-bottom:1px solid var(--line)}td:first-child{color:var(--mute);width:38%}
+.badge{display:inline-block;padding:1px 12px;border-radius:99px;font-size:14px;background:var(--abg);color:var(--a)}
+.badge.hl{background:var(--hlbg);color:var(--hl)}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+input[type=search]{flex:1;min-width:180px;padding:7px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+a.btn{display:inline-block;margin-top:6px;color:var(--a);font-weight:600;text-decoration:none}
+audio{width:100%;margin-top:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.pg{display:block;height:6px;border-radius:99px;background:var(--line);margin-top:10px;overflow:hidden}.pg i{display:block;height:100%;background:var(--a)}.th[aria-pressed=true] .pg{background:rgba(255,255,255,.3)}.th[aria-pressed=true] .pg i{background:var(--card)}
+.vc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}.vc b{font-size:24px;display:block}.vc[data-on=true]{border-color:var(--a)}
+.k{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:2px 14px;margin-top:8px;font-size:15px}.k[aria-pressed=true]{background:var(--a);color:var(--card);border-color:var(--a)}
+@media (prefers-reduced-motion:no-preference){.th{transition:background .2s}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">العربية ب · مركز التعلم</div>
+  <div class="lv" role="group" aria-label="المستوى"><button data-l="SL">SL</button><button data-l="HL">HL</button></div>
+  <div id="who"></div>
+  <nav id="nav"></nav>
+</header>
+<main id="m"></main>
+<script>
+/* ضع رابط تطبيق الويب من Google Apps Script هنا */
+const CONFIG={API_URL:"",CLIENT_ID:"",DOMAIN:"aisa.sch.ae"};
+
+const THEMES=[
+ {id:"identities",ar:"الهويات",en:"Identities",t:["أنماط الحياة","الصحة والعافية","المعتقدات والقيم","الثقافات الفرعية","اللغة والهوية"]},
+ {id:"experiences",ar:"التجارب",en:"Experiences",t:["أنشطة وقت الفراغ","العطلات والسفر","قصص الحياة","طقوس العبور","العادات والتقاليد","الهجرة"]},
+ {id:"ingenuity",ar:"الإبداع البشري",en:"Human ingenuity",t:["الترفيه","التعبيرات الفنية","الاتصال والإعلام","التكنولوجيا","الابتكار العلمي"]},
+ {id:"social",ar:"التنظيم الاجتماعي",en:"Social organization",t:["العلاقات الاجتماعية","المجتمع","المشاركة الاجتماعية","التعليم","عالم العمل","القانون والنظام"]},
+ {id:"planet",ar:"تقاسم الكوكب",en:"Sharing the planet",t:["البيئة","حقوق الإنسان","السلم والنزاع","المساواة","العولمة","الأخلاقيات","البيئة الحضرية والريفية"]}];
+
+const EX={
+ p1:{t:"الورقة الأولى: الكتابة (مهارات إنتاجية)",
+  d:"تختار مهمة كتابية واحدة من ثلاث، وكل مهمة مرتبطة بأحد المحاور وبنوع نص محدد (مقال، رسالة، تقرير، مدوّنة، خطاب...).",
+  SL:[["المدة","ساعة و15 دقيقة"],["الوزن","25% من الدرجة"],["الدرجة","30"],["عدد الكلمات","250 – 400"]],
+  HL:[["المدة","ساعة و30 دقيقة"],["الوزن","25% من الدرجة"],["الدرجة","30"],["عدد الكلمات","450 – 600"]],
+  tips:["حدّد نوع النص والقارئ والغرض قبل أن تكتب أول جملة.","خطّط في خمس دقائق: فكرة رئيسة، حجتان أو ثلاث، خاتمة.","المعايير: اللغة (12)، الرسالة (12)، الفهم المفاهيمي (6)."]},
+ p2:{t:"الورقة الثانية: الفهم (مهارات استقبالية)",
+  d:"قسمان: الاستماع والقراءة. تُجاب الأسئلة بالاختيار من متعدد، والإجابات القصيرة، والمطابقة.",
+  SL:[["المدة","ساعة و45 دقيقة"],["الوزن","50% من الدرجة"],["الدرجة","65"],["الاستماع","45 دقيقة · 25 درجة"],["القراءة","ساعة · 40 درجة"]],
+  HL:[["المدة","ساعتان"],["الوزن","50% من الدرجة"],["الدرجة","65"],["الاستماع","نحو ساعة · 25 درجة"],["القراءة","نحو ساعة · 40 درجة"]],
+  tips:["اقرأ الأسئلة أولاً ثم النص، فهي تدلّك على مكان الإجابة.","في الإجابات القصيرة: انقل المعنى المطلوب بدقة ولا تكتب أكثر مما يُسأل.","لا تترك سؤالاً بلا إجابة."]},
+ listening:{t:"الاستماع",
+  d:"جزء من الورقة الثانية. تستمع إلى عدة مقاطع صوتية (حوار، نشرة، مقابلة، إعلان)، ويُسمع كل مقطع مرتين، ثم تجيب عن الأسئلة.",
+  SL:[["الزمن","45 دقيقة"],["الدرجة","25"],["عدد مرات التشغيل","مرتان لكل مقطع"]],
+  HL:[["الزمن","نحو ساعة"],["الدرجة","25"],["عدد مرات التشغيل","مرتان لكل مقطع"]],
+  tips:["في الاستماع الأول التقط الفكرة العامة، وفي الثاني تحقّق من التفاصيل.","انتبه للأرقام والأسماء وكلمات الربط (لكن، بينما، لذلك).","درّب أذنك على اللهجات والسرعات المختلفة بمواد صوتية متنوعة."]},
+ io:{t:"الاختبار الشفوي الفردي (IO)",
+  d:"يُسجَّل وتقيّمه المدرسة وتعتمده IB، ويتكوّن من ثلاثة أجزاء متتابعة: عرض، ثم نقاش متابعة، ثم محادثة عامة حول المحاور.",
+  SL:[["التحضير","15 دقيقة"],["الأساس","صورة / مثير بصري مرتبط بمحور"],["العرض","3 – 4 دقائق"],["نقاش المتابعة","4 – 5 دقائق"],["المحادثة العامة","5 – 6 دقائق"],["الوزن","25% · 30 درجة"]],
+  HL:[["التحضير","20 دقيقة"],["الأساس","مقطع من أحد العملين الأدبيين المدروسين"],["العرض","3 – 4 دقائق"],["نقاش المتابعة","4 – 5 دقائق"],["المحادثة العامة","5 – 6 دقائق"],["الوزن","25% · 30 درجة"]],
+  tips:["صِف المثير أو المقطع، ثم اربطه بالمحور وبثقافة اللغة العربية.","في المحادثة العامة قدّم رأياً وأمثلة، ولا تكتفِ بالسرد.","المعايير: اللغة (12)، الرسالة (12)، مهارات التفاعل (6)."]}};
+
+/* محتوى تجريبي يظهر عند عدم ربط الجدول */
+const SAMPLE=[
+ {level:"ALL",section:"identities",title:"قائمة مفردات: الهوية واللغة",type:"text",body:"أضف هنا مفردات وتعابير ودروساً. تظهر موادّك من الجدول بمجرد ربط الرابط في CONFIG.",url:"",date:""},
+ {level:"ALL",section:"listening",title:"تدريب استماع تجريبي",type:"text",body:"مثال لمادة استماع. ضع رابط الملف الصوتي في عمود url واكتب audio في عمود type.",url:"",date:""},
+ {level:"ALL",section:"identities",title:"هُوِيّة",type:"vocab",body:"ما يميّز الشخص أو الجماعة · أعتزّ بهويتي العربية",url:"",date:""},
+ {level:"ALL",section:"identities",title:"انتماء",type:"vocab",body:"الشعور بالارتباط بجماعة أو وطن · لديه انتماء قوي لمدينته",url:"",date:""},
+ {level:"ALL",section:"experiences",title:"تقاليد",type:"vocab",body:"عادات تنتقل بين الأجيال · نحافظ على تقاليد العيد",url:"",date:""},
+ {level:"ALL",section:"ingenuity",title:"ابتكار",type:"vocab",body:"إنتاج فكرة أو أداة جديدة · ابتكار علمي غيّر حياتنا",url:"",date:""},
+ {level:"ALL",section:"social",title:"مجتمع",type:"vocab",body:"جماعة من الناس يعيشون معاً · خدمة المجتمع واجب",url:"",date:""},
+ {level:"ALL",section:"planet",title:"استدامة",type:"vocab",body:"استعمال الموارد دون استنزافها · التنمية المستدامة",url:"",date:""}];
+
+let L="SL",view="home",tab="p1",theme="identities",sec="all",q="",items=[],done={},shown={};
+try{done=JSON.parse(localStorage.getItem("ab-done")||"{}")}catch(e){}
+const idOf=i=>i.section+"|"+i.title;
+let tok="",pt;
+const save=()=>{try{localStorage.setItem("ab-done",JSON.stringify(done))}catch(e){}push()};
+function push(){if(!tok)return;clearTimeout(pt);pt=setTimeout(()=>post({action:"save",done,level:L}),800)}
+async function post(o){try{const r=await fetch(CONFIG.API_URL,{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({...o,token:tok})});const j=await r.json();if(j.error){tok="";alert("انتهت الجلسة أو الحساب غير مسموح. سجّل الدخول بحساب المدرسة.");signBtn()}return j}catch(e){console.error(e)}}
+function signBtn(){document.querySelector("#who").innerHTML="";google.accounts.id.renderButton(document.querySelector("#who"),{theme:"outline",size:"medium",locale:"ar"})}
+function initAuth(){
+ if(!CONFIG.CLIENT_ID||!CONFIG.API_URL)return;
+ const s=document.createElement("script");s.src="https://accounts.google.com/gsi/client";s.async=true;
+ s.onload=()=>{google.accounts.id.initialize({client_id:CONFIG.CLIENT_ID,hd:CONFIG.DOMAIN,callback:async r=>{
+  tok=r.credential;const j=await post({action:"get"});
+  if(j&&j.name){done={...done,...j.done};save();document.querySelector("#who").innerHTML=`<span class="mute">${esc(j.name)}</span>`;render()}}});signBtn()};
+ document.head.appendChild(s);
+}
+const inL=i=>i.level==="ALL"||i.level===L;
+function prog(s){const a=items.filter(i=>i.section===s&&inL(i));return [a.filter(i=>done[idOf(i)]).length,a.length]}
+const $=s=>document.querySelector(s);
+const NAV=[["home","المحاور الخمسة"],["exam","التقييم"],["vocab","بنك المفردات"],["lib","المكتبة"]];
+const SEC=[["all","الكل"],...THEMES.map(x=>[x.id,x.ar]),["p1","الورقة 1"],["p2","الورقة 2"],["listening","الاستماع"],["io","الشفوي"]];
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function home(){
+ const t=THEMES.find(x=>x.id===theme);
+ return `<h1>اللغة العربية ب · ${L}</h1>
+ <p class="mute">مادة منظّمة حول المحاور الخمسة، تُبنى عليها الورقتان والاختبار الشفوي. اختر محوراً لترى موضوعاته.</p>
+ <div class="themes">${THEMES.map(x=>`<button class="th" data-th="${x.id}" aria-pressed="${x.id===theme}"><b>${x.ar}</b><small>${x.en}</small>${(p=>p[1]?`<span class="pg"><i style="width:${p[0]/p[1]*100}%"></i></span><small>${p[0]} / ${p[1]} أُنجز</small>`:"")(prog(x.id))}</button>`).join("")}</div>
+ <div class="panel"><h2 style="margin-top:0">${t.ar}</h2><p class="mute">الموضوعات المقترحة لهذا المحور:</p><div class="tags">${t.t.map(x=>`<span class="tag">${x}</span>`).join("")}</div>
+ <p style="margin-top:14px">${L==="HL"?"في HL تُربط موضوعات المحور بالعملين الأدبيين المدروسين.":"في SL تُربط موضوعات المحور بنصوص وصور من العالم العربي."}</p>
+ <a class="btn" href="#" data-go="lib" data-s="${t.id}">مواد هذا المحور في المكتبة ‹</a> &nbsp; <a class="btn" href="#" data-go="vocab" data-s="${t.id}">مفردات هذا المحور ‹</a></div>`;
+}
+function exam(){
+ const e=EX[tab];
+ return `<h1>التقييم</h1><div class="bar">${Object.keys(EX).map(k=>`<button class="chip" data-tab="${k}" aria-pressed="${k===tab}">${EX[k].t.split(":")[0]}</button>`).join("")}</div>
+ <div class="panel"><h2 style="margin-top:0">${e.t} <span class="badge ${L==="HL"?"hl":""}">${L}</span></h2><p>${e.d}</p>
+ <table>${e[L].map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join("")}</table>
+ <h2>نصائح</h2><ul>${e.tips.map(x=>`<li>${x}</li>`).join("")}</ul></div>
+ <p class="mute">الأرقام مبنية على دليل مادة اللغة ب، فتأكد منها مع معلمك ومن الدليل الرسمي للدورة الحالية.</p>`;
+}
+function lib(){
+ const f=items.filter(i=>i.type!=="vocab"&&inL(i)&&(sec==="all"||i.section===sec)&&(!q||(i.title+i.body).includes(q)));
+ return `<h1>المكتبة</h1><div class="bar"><input type="search" id="q" placeholder="ابحث في المواد…" value="${esc(q)}" aria-label="بحث"></div>
+ <div class="bar">${SEC.map(s=>`<button class="chip" data-sec="${s[0]}" aria-pressed="${s[0]===sec}">${s[1]}</button>`).join("")}</div>
+ <div class="grid">${f.map(i=>`<article class="panel"><span class="badge ${i.level==="HL"?"hl":""}">${i.level==="ALL"?"SL + HL":i.level}</span><h3 style="margin:8px 0 4px">${esc(i.title)}</h3><p class="mute">${esc(i.body)}</p>
+ ${i.type==="audio"&&i.url?`<audio controls src="${esc(i.url)}"></audio>`:i.url?`<a class="btn" href="${esc(i.url)}" target="_blank" rel="noopener">فتح المادة ‹</a>`:""}<br><button class="k" data-k="${esc(idOf(i))}" aria-pressed="${!!done[idOf(i)]}">${done[idOf(i)]?"✓ أنجزتها":"أنجزتها؟"}</button></article>`).join("")||'<p class="mute">لا توجد مواد مطابقة بعد.</p>'}</div>`;
+}
+function vocab(){
+ const f=items.filter(i=>i.type==="vocab"&&inL(i)&&(sec==="all"||i.section===sec));
+ const n=f.filter(i=>done[idOf(i)]).length;
+ return `<h1>بنك المفردات</h1><p class="mute">اضغط «المعنى» ثم علّم الكلمات التي حفظتها. حفظتَ ${n} من ${f.length}.</p>
+ <div class="bar">${SEC.slice(0,6).map(s=>`<button class="chip" data-sec="${s[0]}" aria-pressed="${s[0]===sec}">${s[1]}</button>`).join("")}</div>
+ <div class="grid">${f.map(i=>{const k=esc(idOf(i)),[m,ex]=String(i.body).split("·"),on=!!done[idOf(i)],sh=!!shown[idOf(i)];return `<div class="vc" data-on="${on}"><b>${esc(i.title)}</b>${sh?`<p>${esc(m)}</p><p class="mute">${esc(ex||"")}</p>`:""}<button class="k" data-f="${k}">${sh?"إخفاء":"المعنى"}</button> <button class="k" data-k="${k}" aria-pressed="${on}">${on?"✓ حفظتها":"حفظتها؟"}</button></div>`}).join("")||'<p class="mute">لا توجد مفردات بعد.</p>'}</div>`;
+}
+function render(){
+ $("#nav").innerHTML=NAV.map(n=>`<button data-go="${n[0]}" ${n[0]===view?'aria-current="true"':""}>${n[1]}</button>`).join("");
+ document.querySelectorAll(".lv button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===L));
+ $("#m").innerHTML={home,exam,vocab,lib}[view]();
+ const qi=$("#q");if(qi)qi.oninput=e=>{q=e.target.value;const p=e.target.selectionStart;render();const n=$("#q");n.focus();n.setSelectionRange(p,p)};
+}
+document.addEventListener("click",e=>{
+ const b=e.target.closest("[data-l],[data-go],[data-th],[data-tab],[data-sec],[data-k],[data-f]");if(!b)return;e.preventDefault();
+ const d=b.dataset;
+ if(d.k){done[d.k]=!done[d.k];save()}if(d.f)shown[d.f]=!shown[d.f];if(d.l)L=d.l;if(d.go){view=d.go;if(d.s)sec=d.s}if(d.th)theme=d.th;if(d.tab)tab=d.tab;if(d.sec)sec=d.sec;render();
+});
+async function load(){
+ items=SAMPLE;
+ if(CONFIG.API_URL){try{const r=await fetch(CONFIG.API_URL);items=await r.json()}catch(err){console.error(err)}}
+ render();
+}
+render();load();initAuth();
+</script>
+</body>
+</html>
